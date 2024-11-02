@@ -9,7 +9,7 @@ type RegisterValues = {
     name: string;
     email: string;
     password: string;
-    wallet: number;
+    bank: number;
 }
 
 const Register = () => {
@@ -19,14 +19,14 @@ const Register = () => {
     const onSubmit = async (data: RegisterValues) => {
         const parsedData = {
             ...data,
-            wallet: Number(data.wallet)
+            bank: Number(data.bank)
         };
         try {
             const response = await axios.post('http://localhost:9000/api/auth/register', parsedData);
             setResponseMessage("Registration successful! Welcome, " + response.data.name);
             setTimeout(() => {
                 window.location.href = '/login';
-            }, 800);
+            }, 1000);
         } catch (err) {
             setResponseMessage("This email is already exist. Try again!");
         }
@@ -52,8 +52,8 @@ const Register = () => {
                     {errors.password && <span>This field is required</span>}
 
                     <p>Bank</p>
-                    <input {...register('wallet', { required: true })} type="number" placeholder='Enter bank amount'/>
-                    {errors.wallet && <span>This field is required</span>}
+                    <input {...register('bank', { required: true })} type="number" placeholder='Enter bank amount'/>
+                    {errors.bank && <span>This field is required</span>}
                     <p>
                         <button type="submit">Register!</button>
                     </p>

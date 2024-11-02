@@ -44,7 +44,11 @@ const SellProduct = () => {
 
   const onSubmit = (data: ProductAndUser) => {
     setResponseMessage("");
-    window.confirm("Notice: fee 20%\nAre you sure you want to proceed?");
+    const userConfirmed = window.confirm("Notice: fee 20%\nAre you sure you want to proceed?");
+    if (!userConfirmed) {
+      setResponseMessage("Transaction cancelled by user.");
+      return;
+    }
     setLoader(true);
     sellProductWithConfirmation(data);
   };

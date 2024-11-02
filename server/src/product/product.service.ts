@@ -137,12 +137,12 @@ export class ProductService {
 
   async removeProduct(id: string): Promise<ExistingProductDTO> {
     const product = await this.productRepository.removeProduct(id);
-    const userId = await product.user_id.toString();
     if (!product) {
       this.logger.error(`Couldn't delete product!`);
       throw new Error();
     }
     this.logger.log(`Product has deleted successfully`);
+    const userId = await product.user_id.toString();
     await this.logsService.logActivity(userId, 'deleteProduct');
     return plainToClass(ExistingProductDTO, product, {
       excludeExtraneousValues: true,
