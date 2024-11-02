@@ -1,0 +1,7 @@
+.trade-center-container {
+  display: flex;
+  justify-content: space-between; /* Adjust alignment as needed */
+  gap: 200px;
+  padding-top:100px;
+}
+

@@ -1,0 +1,29 @@
+/* styles.css */
+
+.Table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Table th,
+  .Table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .Table th {
+    background-color: #f2f2f2;
+  }
+  
+  .Table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .Table tbody tr:hover {
+    background-color: #e9e9e9;
+  }
+  

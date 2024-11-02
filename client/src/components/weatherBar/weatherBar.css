@@ -1,0 +1,43 @@
+/* Adjust the container to be in a single line */
+.top-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 95%; /* Initial width */
+  max-height: 40px; /* Initial height */
+  background-color: papayawhip;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  transition: max-height 0.4s ease-in-out; /* Transition on max-height change */
+  z-index: 1000;
+}
+
+/* Expand the top bar on hover */
+.top-bar:hover {
+  max-height: 50px; /* Expanded height */
+}
+
+/* Align items in the same line */
+.weather-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Style each line of weather info */
+.weather-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.weather-info p {
+  font-size: 14px;
+}

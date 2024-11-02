@@ -1,0 +1,13 @@
+.toogle-window {
+  all: initial;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.toogle-window:hover {
+  color: #ffcc00;
+  background-color: initial;
+}
