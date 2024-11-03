@@ -6,7 +6,6 @@ import { ExistingProductDTO } from './dtos/existing-product.dto';
 import { InvalidCredentialsException } from 'src/global-filters/invalid-credentials.exception';
 import { CompleteProductDTO } from './dtos/complete-product.dto';
 import { Throttle } from '@nestjs/throttler';
-import { NewProductDTO } from './dtos/new-product.dto';
 import { ProductDocument } from './product.schema';
 
 @ApiTags('product')

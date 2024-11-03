@@ -22,9 +22,10 @@ export class LogsService {
   ) { }
 
   async upload(fileName: string, file: Buffer) {
+    const bucketName = this.configService.getOrThrow('S3_BUCKET_NAME'); 
     await this.s3Client.send(
       new PutObjectCommand({
-        Bucket: 'nestjs-products',
+        Bucket: bucketName,
         Key: fileName,
         Body: file,
       }),
