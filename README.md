@@ -1,6 +1,6 @@
-# Bigfoot's marketplace
+# Bigfoot's Marketplace
 
-Bigfoot's Place is a full-stack web application built using TypeScript (TSX) with a **NestJS** backend and a **React** frontend. This project includes several core services, providing a range of functionalities such as user authentication, trading, and product management. The backend follows a 3-layer architecture and interacts with **MongoDB** and **AWS S3** for data storage and asset management.
+Bigfoot's Marketplace is a full-stack web application built using TypeScript (TSX) with a **NestJS** backend and a **React** frontend. This project includes several core services, providing a range of functionalities such as user authentication, trading, and product management. The backend follows a 3-layer architecture and interacts with **MongoDB** and **AWS S3** for data storage and asset management.
 
 ## Table of Contents
 
